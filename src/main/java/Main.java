@@ -2,9 +2,10 @@ import beepers.Beeper;
 import beepers.FancyMusic;
 import beepers.Horn;
 import beepers.MagicSparks;
-import engines.Engine;
 import engines.Engine12V;
 import engines.FSDEngine;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,13 +20,12 @@ public class Main {
         Lambo lambo = new Lambo(magic, engine12V);
         Tesla tesla = new Tesla(music, fsdEngine);
 
-        tesla.scoopFuel();
-        tesla.landToPlanet();
+        ArrayList<Car> carList = new ArrayList<Car>();
+        carList.add(tesla);
+        carList.add(lambo);
 
-        System.out.println(tesla.checkBeep());
-        System.out.println(tesla.checkSpeed());
-
-        System.out.println(lambo.checkBeep());
-        System.out.println(lambo.checkSpeed());
+        for (int i = 0; i < carList.size(); i++){
+            System.out.println(carList.get(i).checkBeep());
+        }
     }
 }
