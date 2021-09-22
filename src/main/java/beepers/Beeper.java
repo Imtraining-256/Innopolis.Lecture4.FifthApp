@@ -1,5 +1,7 @@
+package beepers;
+
 /**
- * Beeper contract
+ * beepers.Beeper contract
  */
 public interface Beeper {
 

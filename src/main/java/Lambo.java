@@ -1,3 +1,6 @@
+import beepers.Beeper;
+import engines.Engine;
+
 /**
  * Lamb - concrete car
  */
